@@ -53,12 +53,8 @@ class Medium {
         orientation = json["orientation"],
         mimeType = json["mimeType"],
         duration = json['duration'] ?? 0,
-        creationDate = json['creationDate'] != null
-            ? DateTime.fromMillisecondsSinceEpoch(json['creationDate'])
-            : null,
-        modifiedDate = json['modifiedDate'] != null
-            ? DateTime.fromMillisecondsSinceEpoch(json['modifiedDate'])
-            : null;
+        creationDate = null,
+        modifiedDate = null;
 
   /// Get a JPEG thumbnail's data for this medium.
   Future<List<int>> getThumbnail({
